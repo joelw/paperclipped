@@ -165,7 +165,7 @@ module AssetTags
   end
   
   desc %{
-    Renders an image tag for the asset. Using the option size attribute, different sizes can be display. Thumbnail and icon are built 
+    Renders an image tag for the asset. Using the optional <code>size</code> attribute, different sizes can be displayed. Thumbnail and icon are built 
     in, but custom sizes can be set using assets.addition_thumbnails in the Radiant::Config settings.
     
     *Usage:* 
@@ -190,7 +190,7 @@ module AssetTags
     end
   end
   desc %{
-    Embeds a flash-movie in a cross-browser-compatible fashion using only HTML
+    Embeds a Flash movie in a cross-browser-compatible fashion using only HTML.
     
     *Usage:*
     <pre><code><r:assets:flash [title="asset_title"] [width="100"] [height="100"]>Fallback content</flash></code></pre>
@@ -252,10 +252,10 @@ module AssetTags
   
   desc %{
     Renders a link to the asset. If the asset is an image, the <code>size</code> attribute can be used to 
-    generate a link to that size. 
+    generate a link to that size. The text of the link can optionally be set with the <code>text</code> attribute.
     
     *Usage:* 
-    <pre><code><r:image [title="asset_title"] [size="icon|thumbnail"]></code></pre>
+    <pre><code><r:image [title="asset_title"] [size="icon|thumbnail"] [text="link text"]></code></pre>
   }
   tag 'assets:link' do |tag|
     options = tag.attr.dup
